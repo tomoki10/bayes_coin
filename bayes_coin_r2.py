@@ -26,21 +26,3 @@ while True:
     print "pi( theta| D",count,") = ", result
     print "After Production ",thetaT," = ",integrate(result*thetaT,(theta,range_first, range_last))
     beforeP = result
-
-    
-    
-'''
-#Second
-print
-print "Second"
-beforeP = result #upload
-print beforeP
-eq = Eq(1,k*integrate(beforeP*theta,(theta,range_first, range_last)))
-print eq
-solL=solve(eq, k)
-print "k =",solve(eq, k)
-result = solL[0]*beforeP*theta
-print "pi(theta|D2) = ", result
-
-print integrate(result*theta,(theta,range_first, range_last))
-'''
