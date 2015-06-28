@@ -11,7 +11,7 @@ while True:
     print
     print "Negative:0   Positive:1 please input a number:"
     headORtail = input()
-    print "Before Production theta mean= ",beforeP
+    print "Before Distribution theta mean= ",beforeP
     if headORtail == 1:
         thetaT = theta
     elif headORtail == 0:
@@ -24,8 +24,8 @@ while True:
     result = solve(eq, k)[0]*beforeP*thetaT
     print "pi( theta| D",count,") = ", result
     if headORtail == 1:
-        print "After Production theta mean = ",integrate(result*thetaT,(theta,0, 1))
+        print "After Distribution theta mean = ",integrate(result*thetaT,(theta,0, 1))
     elif headORtail == 0:
-        print "After Production theta mean = ",1-integrate(result*thetaT,(theta,0, 1))
+        print "After Distribution theta mean = ",1-integrate(result*thetaT,(theta,0, 1))
     beforeP = result
     plot(result,(theta,-2.0,2.0),axis_center='center')
